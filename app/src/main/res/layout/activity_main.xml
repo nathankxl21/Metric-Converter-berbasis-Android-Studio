@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#75B1FF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Metric Converter"
+        android:textStyle="bold|italic"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="By: Donald N.P Kansil"
+        android:textSize="10sp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/textViewTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewBy"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonMeterToKilometer"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="#B0E0E6"
+            android:textColor="@color/black"
+            android:text="Meter - Kilometer"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonKilometerToMeter"
+            android:layout_width="wrap_content"
+            android:background="#98FB98"
+            android:layout_height="48dp"
+            android:textColor="@color/black"
+            android:text="Kilometer - Meter"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextValue"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/radioGroup"
+        android:layout_marginTop="75dp"
+        android:background="#C0C0C0"
+        android:textColor="@color/black"
+        android:hint="Enter the Number to Convert"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/buttonConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:layout_below="@+id/editTextValue"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text=""
+        android:layout_below="@+id/buttonConvert"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+</RelativeLayout>
