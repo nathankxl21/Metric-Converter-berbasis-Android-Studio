@@ -33,17 +33,17 @@ class MainActivity : AppCompatActivity() {
 
         valueEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                // Do nothing
+                
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                // Enable or disable the convert button based on input
+               
                 val input = s.toString().trim()
                 convertButton.isEnabled = input.isNotEmpty()
             }
 
             override fun afterTextChanged(s: Editable?) {
-                // Do nothing
+                
             }
         })
     }
